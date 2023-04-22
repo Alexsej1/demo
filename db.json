@@ -1,0 +1,54 @@
+{
+  "type": "array",
+  "minItems": 20,
+  "maxItems": 70,
+  "items": {
+    "type": "object",
+    "properties": {
+      "productName": {
+        "type": "string",
+        "faker": "commerce.productName"
+      },
+      "quantity": {
+        "type": "integer",
+        "minimum": 0,
+        "maximum": 100
+      },
+      "price": {
+        "type": "number",
+        "faker": "commerce.price",
+        "minimum": 10,
+        "maximum": 1000
+      },
+      "кассир": {
+        "type": "string",
+        "faker": "name.firstName"
+      },
+      "менеджер": {
+        "enum": [
+          "Sylvester",
+          "Will",
+          "Ericka",
+          "Jenifer"
+        ]
+      },
+      "producer": {
+        "type": "string",
+        "faker": "company.companyName"
+      },
+      "cайт": {
+        "type": "string",
+        "faker": "internet.url"
+      }
+    },
+    "required": [
+      "Id",
+      "productName",
+      "quantity",
+      "price",
+      "producer",
+      "cайт",
+      "кассир",
+      "менеджер"
+    ]
+  }
